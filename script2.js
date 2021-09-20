@@ -588,43 +588,43 @@ function showDetails(student) {
     }
 
 
-    // if (student.squad === true) {
-    //   popWindow.querySelector(
-    //     ".squad"
-    //   ).textContent = `inquisitorial squad : Is member`;
-    // } else {
-    //   popWindow.querySelector(
-    //     ".squad"
-    //   ).textContent = `inquisitorial squad : Not member`;
-    // }
+    if (student.squad === true) {
+      popWindow.querySelector(
+        ".squad"
+      ).textContent = `inquisitorial squad : Is member`;
+    } else {
+      popWindow.querySelector(
+        ".squad"
+      ).textContent = `inquisitorial squad : Not member`;
+    }
 
-    // document.querySelector(".addsquad").addEventListener("click", clickAddSquad);
-    // function clickAddSquad() {
-    //   document
-    //     .querySelector(".addsquad")
-    //     .removeEventListener("click", clickAddSquad);
-    //   if (student.squad === true) {
-    //     student.squad = false;
-    //   } else {
-    //     tryToBeINSquad(student);
-    //   }
-    //   buildList();
-    // }
+    document.querySelector(".addsquad").addEventListener("click", clickAddSquad);
+    function clickAddSquad() {
+      document
+        .querySelector(".addsquad")
+        .removeEventListener("click", clickAddSquad);
+      if (student.squad === true) {
+        student.squad = false;
+      } else {
+        tryToBeINSquad(student);
+      }
+      buildList();
+    }
 
-    // function tryToBeINSquad(selectedStudent) {
-    //   if (selectedStudent.house === "Slytherin") {
-    //     addToSquad(selectedStudent);
-    //   } else {
-    //     selectedStudent.squad = false;
-    //   }
-    // }
+    function tryToBeINSquad(selectedStudent) {
+      if (selectedStudent.house === "Slytherin") {
+        addToSquad(selectedStudent);
+      } else {
+        selectedStudent.squad = false;
+      }
+    }
 
-    // function addToSquad(selectedStudent) {
-    //   selectedStudent.squad = true;
-    //   document.querySelector(
-    //     ".squad"
-    //   ).textContent = `inquisitorial squad : Is member`;
-    // }
+    function addToSquad(selectedStudent) {
+      selectedStudent.squad = true;
+      document.querySelector(
+        ".squad"
+      ).textContent = `inquisitorial squad : Is member`;
+    }
 }
 
 function expelTheStudent(student) {
